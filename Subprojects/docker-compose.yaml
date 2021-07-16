@@ -1,0 +1,16 @@
+version: 1
+
+volumes:
+  web:
+
+services:
+  first:
+    build:
+      main/
+    restart: always
+    entrypoint:
+      - TZ=Europe/Moscow
+  second:
+    build:
+      proj2/
+    
