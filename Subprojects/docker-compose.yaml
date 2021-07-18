@@ -1,4 +1,4 @@
-version: 1
+version: "3"
 
 volumes:
   web:
@@ -8,8 +8,11 @@ services:
     build:
       main/
     restart: always
-    entrypoint:
+    ports: 
+      - 8080:8080
+    environment:
       - TZ=Europe/Moscow
+    
   second:
     build:
       proj2/
